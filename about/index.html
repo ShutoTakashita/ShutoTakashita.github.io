@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Roboto:wght@400;700&display=swap">
+    <style>
+        /* 共通のスタイル */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #080808;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+            margin: 0;
+        }
+        .logo {
+            display: block;
+            /* ブロック要素として表示 */
+            text-align: left;
+            /* ロゴを右揃えに */
+            margin-bottom: -50px;
+            /* Worksとの間隔を確保 */
+        }
+
+        .logo img {
+            width: 50px;
+            /* ロゴの幅。必要に応じて変更 */
+        }
+
+        header {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        h2 {
+            margin-top: 0;
+            margin-left: 10px;
+        }
+
+        img[src="avatar.png"] {
+            display: block;
+            width: 120%;
+            max-width: 500px;
+            margin: 0 auto 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .contents {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .photo-section {
+            flex: 1;
+            max-width: 300px;
+            margin-right: 20px;
+            margin-left: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .detail-section {
+            flex: 2;
+            text-align: left;
+        }
+
+        /* PC表示の場合のスタイル */
+        @media (min-width: 768px) {
+            body>div {
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            img[src="avatar.png"] {
+                margin: 0;
+                margin-right: 50px;
+            }
+
+            div>div {
+                flex: 1;
+                max-width: 60%;
+            }
+
+            .logo {
+                margin-bottom: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="http://shike-xr.com">
+                <img src="logo_white.png" alt="Shike XR Logo">
+            </a>
+        </div>
+        <h1>About</h1>
+    </header>
+    <div>
+
+
+        <div class="photo-section">
+            <img src="avatar.png" alt="Shuto Takashita">
+        </div>
+
+        <div class="detail-section">
+            <h2>経歴</h2>
+            <ul>
+                <li>2018/04　東京大学理科一類　入学</li>
+                <li>2022/03　東京大学航空宇宙工学科　卒業</li>
+                <li>　　　　　(指導教員: 水口周)</li>
+                <li>2024/03　東京大学学際情報学府　先端表現情報学コース　修士課程　修了</li>
+                <li>　　　　　(最優秀修士論文・学府長賞)　(指導教員: 稲見昌彦)</li>
+                <li>2024/04　同　博士課程　進学</li>
+                <li>航空宇宙工学(学士)</li>
+                <li>学際情報学(修士)</li>
+                <li>リサーチアルバイト　東京大学稲見研究室　“Unconventional Body Project”　(2021年10月 – 2022年3月)</li>
+                <li>Sony CSL　リサーチアシスタント(非常勤)　(2024年4月 - )</li>
+            </ul>
+
+            <h2>Skills</h2>
+            <ul>
+                <li>Advanced : 3D modeling (blender), Unity (VR), Arduino, Space Enginnering</li>
+                <li>Intermediate : Arduino, Machine Learning, CG Animation, 3D print, Shader</li>
+                <li>Begineer : Web (html, css), AWS, Docker</li>
+            </ul>
+
+            <h2>Research Interests</h2>
+            <ul>
+                <li>Non-Humanoid Avatar, Human Augmentation, User-Created Avatar Cultures, Virtual Reality, Human Computer Interaction, Space Engineering</li>
+            </ul>
+
+            <h2>Research Achievements</h2>
+
+            <h3>Journal Papers</h3>
+            <ul>
+                <li>1. 高下修聡, 水口周, 北本和也(2022), Physics-Informed Neural Networkを用いた複合材厚み方向吸湿率分布の推定,日本複合材料学会誌, Vol. 48, No. 2, pp. 63-69.</li>
+                <li>2. 高下修聡, 荒井謙, 齋藤寛人, 稲見昌彦(2022), Kinematic Altering Illusion:タコ腕型VRアバタの装用による柔らかい身体感の獲得, 日本バーチャルリアリティ学会論文誌,Vol.27, No.4, pp.403-412. </li>
+            </ul>
+        
+            <h3>Conference Papers</h3>
+            <ul>
+                <li>3. Shuto Takashita, Ken Arai, Hiroto Saito, Michiteru Kitazaki, Masahiko Inami, Embodied Tentacle: Mapping Design to Control of Non-Analogous Body Parts with the Human Body, Proceedings of Conference on Human Factors in Computing Systems (ACM CHI), 2024</li>
+            </ul>
+        
+            <h3>Oral Presentation</h3>
+            <ul>
+                <li>1. Kazuki Toma, Shuto Takashita, Shinnichi Nakasuka (2023), Design of Space Music Hall as a Module of Low Earth Orbit Space Station, ICES2023 proceeding.</li>
+                <li>2. Shuto Takashita, Shu Minakuchi, Kazuya Kitamoto (2022), Estimation of Through-Thickness Moisture Distribution in Composite Materials Using Physics-Informed Neural Network, JCCM13 (No Peer Review, National)</li>
+            </ul>
+        
+            <h3>Demonstration</h3>
+            <ul>
+                <li>1. Shuto Takashita, Naoki Tanaka, Taiga Suzuki (2023), Mechanical Brain Hacking: A VR Cybernetics Simulator for Body Editing, SIGGRAPH2023 Immersive Pavilion</li>
+                <li>2. Shuto Takashita, Amane Yamaguchi, Takuji Narumi, Inami Masahiko (2023), AvatarForge: A Real-Time and Node-Based Body Editing System, SIGGRAPH Asia 2023 Emerging Technologies</li>
+                <li>3. Shuto Takashita, Naoki Tanaka, Taiga Suzuki (2022), Mechanical Brain Hacking, ICAT-EGVE2022</li>
+                <li>4. Shuto Takashita, Naoki Tanaka, Taiga Suzuki (2023), Mechanical Brain Hacking, Laval Virtual 2022</li>
+                <li>5. 高下修聡,田中尚輝,鈴木大河(2022), Mechanical Brain Hacking:ロボットアバタを用いた 自らの脳改造・身体システム改造体験, VRSJ27 (査読無し)</li>
+            </ul>
+
+            <h2>受賞歴</h2>
+            <ul>
+                <li>1. 高下修聡,田中尚輝,鈴木大河 (2024), Mechanical Brain Hacking, XR Creative Award 大賞 (107作品中1位)</li>
+                <li>2. 高下修聡,田中尚輝,鈴木大河 (2022), Mechanical Brain Hacking:ロボットアバタを用いた 自らの脳改造・身体システム改造体験, IVRC2022 Laval
+                    Virtual Prize, ICAT-EGVE Special Prize, VR学会賞, Unity賞, ソリッドレイ賞,XR Kaigi招待展示賞</li>
+                <li>3. 高下修聡,田中尚輝,鈴木大河 (2023), Mechanical Brain Hacking, Innovative Technologies 2023</li>
+                <li>4. 高下修聡,田中尚輝,鈴木大河 (2022), Mechanical Brain Hacking, 第28回学生CGコンテスト Silver Prize　(404 作品中上位 7 作品)</li>
+                <li>5. 藤間一輝,高下修聡,岩瀬すみれ (2022), 宇宙音楽ホールの設計図, 第28回学生CGコンテスト Finalist　(404 作品中上位26作品)</li>
+                <li>6. 旭博佑, 高下修聡, 齊藤寛人, 前川和純, 門内靖明, 稲見昌彦 (2024), 身体運動周期を用いた没入型ロコモーションインターフェースの検討, 第 71 回 EC 研究会デモ奨励賞第 1位 (13 件中 1 位)</li>
+                <li>7. 高下修聡, 小山髙 (2020),マドカノ, JPHACKS2020 Special Jury Award, 株式会社バンダイナムコ賞</li>
+                <li>8. 中村昂平、高下修聡、徐一博、前田結衣(2023), 卓球マスターVR,イマクリエイト社　第一回ファンクリエイト 優勝</li>
+            </ul>
+
+            <h2>その他(展示、研究のメディア露出、教育プログラム修了、競争的資金の獲得)</h2>
+            <ul>
+                <li>1. 高下修聡,田中尚輝,鈴木大河 (2022), Mechanical Brain Hacking, XR Kaigi 2022(2022年12月展示)</li>
+                <li>2. 子供の科学“カラダを増やす最新研究！自在化身体プロジェクト”(2023.4.10 掲載)</li>
+                <li>3. someone “あなたの歩く一歩先”(2023.3.1 掲載)</li>
+                <li>4. 東京大学学部横断型教育プログラム「メディアコンテンツ教育プログラム」 (2022.3.31修了)</li>
+                <li>5. 東京大学「未来社会協創」 国際卓越大学院　RA(2022年度~)</li>
+                <li>6. 日本学術振興会　特別研究員DC1(2024年度~)</li>
+                <li>7. SIGGRAPH 2023 “CG in Japan” セッショントーク</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #080808;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+            margin: 0;
+        }
+
+        header {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        .logo {
+            display: block;
+            /* ブロック要素として表示 */
+            text-align: left;
+            /* ロゴを右揃えに */
+            margin-bottom: -50px;
+            /* Worksとの間隔を確保 */
+        }
+
+        .logo img {
+            width: 50px;
+            /* ロゴの幅。必要に応じて変更 */
+        }
+
+        .work-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .work-item {
+            flex: 1 1 calc(33.3333% - 20px);
+            max-width: calc(33.3333% - 20px);
+            position: relative;
+            overflow: hidden;
+            height: 500px;
+        }
+
+        .work-item a {
+            display: block;
+            position: relative;
+            color: white;
+            text-decoration: none;
+        }
+
+        .work-item img {
+            height: 500px;
+            width: 100%;
+            max-width: none;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            vertical-align: bottom;
+            margin: 0 auto;
+        }
+
+        .work-item h2 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background-color: rgba(8, 8, 8, 0.8);
+            margin: 0;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 10;
+        }
+
+        @media (max-width: 768px) {
+            .work-item {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+
+            .work-item img {
+                height: 300px;
+                width: 100%;
+                max-width: none;
+                object-fit: cover;
+                object-position: center;
+                display: block;
+                margin: 0 auto;
+            }
+
+            .work-gallery {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <a href="http://shike-xr.com">
+            <img src="logo_white.png" alt="Shike XR Logo">
+        </a>
+    </div>
+    <header>
+        <h1>Works</h1>
+    </header>
+    <div class="work-gallery">
+        <div class="work-item">
+            <a href="/work/embodied-tentacle">
+                <img src="embodied-tentacle.png" alt="Work 1">
+                <h2>Embodied Tentacle (2023-2024)</h2>
+            </a>
+        </div>
+        <div class="work-item">
+            <a href="/work/mechanical-brain-hacking">
+                <img src="mechanical-brain-hacking.png" alt="Work 1">
+                <h2>Mechanical Brain Hacking (2022-2023)</h2>
+            </a>
+        </div>
+        <div class="work-item">
+            <a href="/work/space-music-hall">
+                <img src="space-music-hall.png" alt="Work 3">
+                <h2>Space Music Hall (2022-2023)</h2>
+            </a>
+        </div>
+        <div class="work-item">
+            <a href="/work/avatarforge">
+                <img src="avatarforge.png" alt="Work 4">
+                <h2>AvatarForge (2023)</h2>
+            </a>
+        </div>
+        <div class="work-item">
+            <a href="/work/pinn-composite">
+                <img src="pinn-composite.png" alt="Work 2">
+                <h2>Estimation of Through-Thickness Moisture Distribution in Composite Materials Using Physics-Informed
+                    Neural Network (2021)</h2>
+            </a>
+        </div>
+        <div class="work-item">
+            <a href="/work/kinematic-altering-illusion">
+                <img src="kinematic-altering-illusion.png" alt="Work 2">
+                <h2>Kinematic altering illusion (2022)</h2>
+            </a>
+        </div>
+        <!-- ...他の作品も同様に記述... -->
+    </div>
+</body>
+
+</html>

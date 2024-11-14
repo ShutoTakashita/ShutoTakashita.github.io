@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shuto Takashita's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Google Fontsのリンクを追加 -->
+    <style>
+        body {
+            background-color: #080808;
+            color: white;
+            font-family: Arial, sans-serif;
+            /* デフォルトのフォント設定 */
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        img.logo {
+            width: 400px;
+            opacity: 0.4;
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 6em;
+            font-family: 'Big Shoulders Display', Arial, sans-serif;
+            margin-bottom: -250px;
+            /* ロゴとの間にスペースを追加 */
+        }
+
+
+        a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.5em;
+        }
+
+        a.work-link {
+            font-family: 'Roboto', Arial, sans-serif;
+            /* Robotoフォントを設定 */
+        }
+
+        .info .university {
+            font-family: sans-serif;
+            /* サンセリフフォントを設定 */
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .info {
+            margin-top: 30px;
+            font-size: 1.2em;
+        }
+
+        @media (min-width: 768px) {
+            img.logo {
+                width: 800px;
+                /* PC表示時のロゴサイズを2倍に */
+            }
+
+            h1 {
+                font-size: 12em;
+                margin-bottom: -500px;
+                /* 名前のフォントサイズを2倍に */
+            }
+
+            a {
+                font-size: 3em;
+                /* リンクのフォントサイズを2倍に */
+            }
+
+            .info {
+                font-size: 2.4em;
+                /* 情報部分のフォントサイズを2倍に */
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Shuto Takashita</h1>
+    <img src="logo_white.png" alt="Shuto Takashita's Logo" class="logo">
+    <div>
+        <a href="/work" class="work-link">Work</a>
+        <a href="/about">About</a>
+    </div>
+    <div class="info">
+        <p class="university">The University of Tokyo GSII</p>
+        <p>Research Fields: Non-humanoid Avatar, HCI, Space Engineering</p>
+        <p>Twitter: @shike_cosmicXR</p>
+        <p>Mail: shuto.takashita@star.rcast.u-tokyo.ac.jp</p>
+    </div>
+</body>
+
+</html>

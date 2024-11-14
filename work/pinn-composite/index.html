@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estimation of Through-Thickness Moisture Distribution in Composite Materials Using Physics-Informed
+        Neural Network</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #080808;
+            color: white;
+            padding: 50px;
+            margin: 0;
+        }
+
+        .logo {
+            display: block;
+            /* ブロック要素として表示 */
+            text-align: left;
+            /* ロゴを右揃えに */
+            margin-bottom: -50px;
+            /* Worksとの間隔を確保 */
+        }
+
+        .logo img {
+            width: 50px;
+            /* ロゴの幅。必要に応じて変更 */
+        }
+
+        .teaser {
+            display: block;
+            text-align: center;
+            margin-bottom: 0px;
+        }
+
+        .teaser img {
+            width: 70%;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            /* 各アイテム間の間隔 */
+        }
+
+        .abstract-container {
+            width: 70%;
+            /* 画面の60%の幅に設定 */
+        }
+
+        .video-container {
+            position: relative;
+            width: 70%;
+            padding-bottom: 33.75%;
+            /* 16:9アスペクト比 */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe,
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .abstract-container p {
+            font-size: 20px;
+        }
+
+        header {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            width: 70%;
+            margin-left: 15%;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            /* 画像を中央揃え */
+            gap: 20px;
+            width: 60%;
+            margin-top: 30px;
+        }
+
+        .gallery img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        /* モーダル用スタイル */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        @media (max-width: 768px) {
+
+            body {
+                padding: 20px;
+            }
+
+            h1 {
+            width: 96%;
+            margin-left: 2%;
+            }
+
+
+            .logo {
+                margin-bottom: 0px;
+            }
+
+            .teaser img {
+                width: 96%;
+            }
+
+            .video-container {
+                position: relative;
+                width: 96%;
+                padding-bottom: 33.75%;
+                /* 16:9アスペクト比 */
+                height: 150px;
+                overflow: visible;
+            }
+
+            .abstract-container {
+                width: 96%;
+                /* 画面の60%の幅に設定 */
+            }
+
+            .abstract-container p {
+                font-size: 14px;
+            }
+
+            .gallery {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                /* 画像を中央揃え */
+                gap: 20px;
+                width: 100%;
+                margin-top: 30px;
+            }
+
+            .gallery img {
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+                cursor: pointer;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <a href="http://shike-xr.com">
+            <img src="logo_white.png" alt="Shike XR Logo">
+        </a>
+    </div>
+    <header>
+        <h1>
+            <a href="https://www.jstage.jst.go.jp/article/jscm/48/2/48_63/_article/-char/ja/">
+                Estimation of Through-Thickness Moisture Distribution in Composite Materials Using Physics-Informed
+                Neural Network
+            </a>
+        </h1>
+    </header>
+    <div class="teaser">
+        <img src="image0.png" alt="Teaser Image">
+    </div>
+    <div class="container">
+        <div class="abstract-container">
+            <h2>Abstract</h2>
+            <p>
+                To predict the moisture desorption behavior of a composite structure in outer space, it is necessary to
+                know the through-thickness distribution of moisture absorption rate in the composite material at the
+                time of launch. However, it is impossible to identify the moisture distribution state by measuring the
+                weight change of the assembled large-scaled structure.
+
+                In this study, we proposed a method for estimating the moisture distribution state of a composite space
+                structure from the information obtained during the moisture desorption test of a witness sample. This
+                sample had the same moisture distribution as the target structure as it was exposed to the same
+                hygrothermal environment.
+
+                We used a physics-informed neural network (PINN), which is a neural network with physics-based
+                constraints, for estimation. This neural network model takes time and through-thickness location as
+                input and returns the local moisture concentration. PINN trains the model by enforcing that the output
+                of the network fulfills the diffusion equation and the change in moisture content during the moisture
+                desorption test of the witness sample.
+
+                First, a numerical experiment using finite element analysis was performed to confirm the effectiveness
+                of the proposed approach. Furthermore, a demonstration experiment was conducted using carbon-epoxy
+                laminates to confirm the practicality of the method. </p>
+        </div>
+    </div>
+    <div class="gallery">
+        <img src="image0.png" alt="Image 1" onclick="openModal('image0.png')">
+        <img src="image1.png" alt="Image 1" onclick="openModal('image1.png')">
+        <img src="image2.png" alt="Image 1" onclick="openModal('image2.png')">
+        <img src="image3.png" alt="Image 1" onclick="openModal('image3.png')">
+        <img src="image4.png" alt="Image 1" onclick="openModal('image4.png')">
+        <img src="image5.png" alt="Image 1" onclick="openModal('image5.png')">
+        <img src="image6.png" alt="Image 1" onclick="openModal('image6.png')">
+        <img src="image7.png" alt="Image 1" onclick="openModal('image7.png')">
+        <img src="image8.png" alt="Image 1" onclick="openModal('image8.png')">
+        <!-- 他の画像も同様に追加 -->
+    </div>
+
+    <!-- モーダルウィンドウ -->
+    <div class="modal" id="imageModal">
+        <img src="" id="modalImage">
+    </div>
+
+    <script>
+        function openModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+
+            modalImage.src = imageSrc;
+            modal.style.display = 'flex';
+
+            modal.addEventListener('click', function () {
+                modal.style.display = 'none';
+            });
+        }
+    </script>
+</body>
+
+</html>

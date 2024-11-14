@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AvatarForge</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #080808;
+            color: white;
+            padding: 50px;
+            margin: 0;
+        }
+
+        .logo {
+            display: block;
+            /* ブロック要素として表示 */
+            text-align: left;
+            /* ロゴを右揃えに */
+            margin-bottom: -50px;
+            /* Worksとの間隔を確保 */
+        }
+
+        .logo img {
+            width: 50px;
+            /* ロゴの幅。必要に応じて変更 */
+        }
+
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            /* 各アイテム間の間隔 */
+        }
+
+        .abstract-container {
+            width: 70%;
+            /* 画面の60%の幅に設定 */
+        }
+
+        .video-container {
+            position: relative;
+            width: 70%;
+            padding-bottom: 33.75%;
+            /* 16:9アスペクト比 */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe,
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .abstract-container p {
+            font-size: 20px;
+        }
+
+        header {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            width: 70%;
+            margin-left: 15%;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            /* 画像を中央揃え */
+            gap: 20px;
+            width: 60%;
+            margin-top: 30px;
+        }
+
+        .gallery img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        /* モーダル用スタイル */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        @media (max-width: 768px) {
+
+            body {
+                padding: 20px;
+            }
+
+            h1 {
+            width: 96%;
+            margin-left: 2%;
+            }
+
+            
+            .logo {
+                margin-bottom: 0px;
+            }
+
+            .video-container {
+                position: relative;
+                width: 96%;
+                padding-bottom: 33.75%;
+                /* 16:9アスペクト比 */
+                height: 150px;
+                overflow: visible;
+            }
+
+            .abstract-container {
+                width: 96%;
+                /* 画面の60%の幅に設定 */
+            }
+
+            .abstract-container p {
+                font-size: 14px;
+            }
+
+            .gallery {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                /* 画像を中央揃え */
+                gap: 20px;
+                width: 100%;
+                margin-top: 30px;
+            }
+
+            .gallery img {
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+                cursor: pointer;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <a href="http://shike-xr.com">
+            <img src="logo_white.png" alt="Shike XR Logo">
+        </a>
+    </div>
+    <header>
+        <h1>
+            <a href="https://dl.acm.org/doi/abs/10.1145/3610541.3614569">
+                AvatarForge : A Real-Time and Node-Based Body Editing System
+            </a>
+        </h1>
+    </header>
+    <div class="container">
+        <div class="video-container">
+            <iframe width="100%" src="https://www.youtube.com/embed/9cExpeZNjdQ" frameborder="0"
+                allowfullscreen></iframe>
+        </div>
+        <div class="abstract-container">
+            <h2>Abstract</h2>
+            <p>
+                Designing non-humanoid avatars with different body structures  from humans so that humans can intuitively manipulate them requires the design of body structure and motion mapping, which is  complex, takes time and requires special design skills. To address  this problem, we propose AvatarForge which allows users to design  non-humanoid avatars by editing body structure and motion mapping in real-time. In this system, users interact with a node-based  interface in a virtual environment to edit their own bodies while  visualizing the changes. This system aims to reduce the difficulty  of designing non-humanoid avatars, expedite the prototyping of  new bodies, and enable personalized avatars that match individual  preferences and physical abilities. It contributes to the advancement of non-humanoid body utilization in various fields such as  CG animation, inclusive design, and human augmentation.
+            </p>
+        </div>
+    </div>
+    <div class="gallery">
+        <img src="image1.png" alt="Image 1" onclick="openModal('image1.png')">
+        <img src="image2.png" alt="Image 2" onclick="openModal('image2.png')">
+        <img src="image3.png" alt="Image 2" onclick="openModal('image3.png')">
+        <img src="image4.png" alt="Image 2" onclick="openModal('image4.png')">
+        <img src="image5.png" alt="Image 2" onclick="openModal('image5.png')">
+        <!-- 他の画像も同様に追加 -->
+    </div>
+
+    <!-- モーダルウィンドウ -->
+    <div class="modal" id="imageModal">
+        <img src="" id="modalImage">
+    </div>
+
+    <script>
+        function openModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+
+            modalImage.src = imageSrc;
+            modal.style.display = 'flex';
+
+            modal.addEventListener('click', function () {
+                modal.style.display = 'none';
+            });
+        }
+    </script>
+</body>
+
+</html>
