@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vision</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Roboto:wght@400;700&display=swap" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #080808;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+            margin: 0;
+        }
+
+        .logo {
+            display: block;
+            text-align: left;
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        .logo img {
+            width: 50px;
+        }
+
+        header {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        h2 {
+            margin-top: 0;
+            margin-left: 10px;
+        }
+
+        /* img[src$=".png"] {
+            display: block;
+            width: 100%;
+            max-width: 500px;
+            margin: 20px 0;
+            text-align: left;
+        } */
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .detail-section {
+            text-align: left;
+            margin: 0 auto;
+            max-width: 960px;
+            padding: 0 20px;
+        }
+
+        .lang-toggle {
+            margin-top: 10px;
+        }
+
+        .lang-toggle button {
+            background: none;
+            border: 1px solid #00BCD4;
+            color: #00BCD4;
+            padding: 4px 10px;
+            margin: 0 4px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .lang-toggle button.active {
+            background: #00BCD4;
+            color: #080808;
+        }
+
+        @media (min-width: 768px) {
+            img[src$=".png"] {
+                margin: 20px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="http://shike-xr.com"><img src="logo_white.png" alt="Shike XR Logo" /></a></div>
+        <h1>Vision</h1>
+        <div class="lang-toggle">
+            <button id="btn-jp" class="active" onclick="setLang('jp')">日本語</button>
+            <button id="btn-en" onclick="setLang('en')">English</button>
+        </div>
+    </header>
+
+    <!-- Japanese content here -->
+    <div id="content-jp">
+        <div class="detail-section">
+            <h2>ビジョン : 多元身体性社会</h2>
+            <h3>「多様な人々が、好みや時と場合に応じて複数の身体性を操り、また自ら適応的に作り変えていく社会」</h3>
+            <p>私は、人が必要に応じて複数の身体性を選び取り、さらに自分で調整できる社会を目指しています。身体的・心理的な制約を減らし、誰もが場⾯に合わせて最適な身体性を選択できることで、世界に生きる人々の姿はより多様になります。
+            </p>
+            <p>たとえば普段の買い物や散歩ではサブアームで荷重を分散する。働くときには、蛇型ロボットに没入して地下を探索する。帰宅後はメタバースでドラゴンになって遊び、犬型アバターで肩の力を抜いて友人と過ごす――。メタモンのように、身体を次から次へと変身させる。そんな「身体の着せ替え」が当たり前になる日常を描いています。
+            </p>
+
+            <img src="vision.png" alt="Vision Illustration">
+
+            <h2>ヒトの身体の可塑性を追求する</h2>
+            <p>非ヒト型アバターには大きく <strong>非相同性</strong>（人と形が共通しない度合い）と <strong>拡張性</strong>（自由度・器官数の増加）の 2
+                軸があります。それぞれが次のような課題を生みます。</p>
+            <ul>
+                <li><em>形の課題</em>：タコ腕や蜘蛛の体など人と異なる形状を、どのように生得的な身体とマッピングすることで、自己身体として扱えるか。</li>
+                <li><em>数の課題</em>：人間本来を超える自由度や広い体表面からの触覚を、どう圧縮・統合・補間して扱うか。</li>
+            </ul>
+
+            <img src="avatars.png" alt="Avatar Illustration" width="600">
+
+            <p>形の課題では、元の身体から再構成された身体までの認知的距離を縮めるマッピングが鍵になります。数の課題では、情報の重畳提示や冗長自由度の再利用が重要です。</p>
+            <p>私はこれらを <strong>(形 , 数) × (操作 , フィードバック)</strong> の 4 領域に整理しました。修士課程では <strong>形 × 操作</strong>
+                の問題に対して取り組みました。今後は残る 3
+                領域のそれぞれを取り組みつつ、それらから得られた知見を統合して「拡張かつ非相同な身体を自分の体として扱うための変身論」をまとめることを博士課程での目標にしています。また、サイバネティックス的な要素のみならず、文化的な「変身」の意義も踏まえて議論を進めていきます。
+            </p>
+
+            <img src="four.png" alt="Four Main Challenges" width="400">
+
+
+            <h2>非ヒト型身体で拡張する能力と心</h2>
+            <p>加えて、これらの身体がもたらす身体能力の拡張・心理的拡張についても検討を行っています。</p>
+            <p><strong>物理的拡張</strong>：タコ腕や蛇型ロボットで狭い空間を探索する、無重力に適応した多脚スーツで宇宙作業を効率化するなど、身体の形状を変えることで活動領域を広げることを将来的に目指しています。
+            </p>
+            <p><strong>心理的拡張</strong>：恐怖症の軽減、動物への共感、自己イメージの再構築といったメンタル面での変化も期待できます。</p>
+            <p>この分野は注目され始めたばかりであり、その応用とそれが発生する機序・理論の両方において開拓の余地が大きく残っています。</p>
+
+            <h2>課題をメタバースの実践から学ぶ</h2>
+            <p>私の興味はメタバース上のアバター文化に根差しており、それをアカデミックな文脈と接続することによってその文化に貢献したいと考えています。2018年にVRChatに飛び込んで以降、バーチャル世界における拡張された身体表現に魅せられ続けてきました。人が尻尾を持ち、けも耳を動かし、火を吐き、そのような拡張されたチャンネルで、新たな形で他人とのコミュニケーションや自己表現を行う。この新たな文化の楽しみを現実とバーチャルの壁を超えて布教し、それの幅を広げていきたいと考えています。
+            </p>
+            <p>ところで、上のセクションで書いたような課題の一部は、メタバース上のユーザーがまさに直面している課題でもあります。そのようなアバターを着ている人へもニーズや課題などを伺いつつ、研究を進めています。</p>
+
+            <h2>Adaptive Embodiment ― ユーザー自身による身体編集</h2>
+            <p>ギリシャ神話のプロテウスは、メネラオスからの逃走劇の中で、状況に合わせて自在に姿を変えました。こうした状況適応的な変身に加え、ユーザーの嗜好や身体特性に応じても操作対象の身体性を柔軟に書き換えられれば、さらに新たな身体の適応の幅が広がります。身体構造や操作方法をユーザーが簡便に編集できる仕組みを備えることで、利用シーン・個人の好み・身体特性の多様性を幅広く支援できます。私は、こうした自己編集と身体間遷移の可能性についても研究を進めています。
+            </p>
+            <p>これまでに<strong>2
+                    つのユーザー自身による身体編集のデモ</strong>と、身体間の変身を扱う作品を複数制作しました。こうした体験を通して実証しつつある「自分で身体を変えることの楽しさと有用性」を、誰もが享受できるプラットフォームへと昇華させたいと考えています。つまり、誰もが簡単に自分で身体を編集でき、またそれをシェアし、自分の好みの形に再編集できるような、user-generatedな身体性の未来を描いています。
+            </p>
+
+            <img src="self-bodyedit.png" alt="Self Body Edit Demos" width="600">
+
+
+            <p style="text-align:center;margin-top:40px;">
+                これまでの内容にご興味のある方はお気軽にご連絡ください。共同研究のお誘い・インターンのご応募を歓迎しています。
+            </p>
+            <p style="text-align:center;font-weight:bold;">
+                東京大学　稲見研究室　博士二年　高下修聡　<br>
+                <a href="https://twitter.com/shike_cosmicXR" target="_blank">@shike_cosmicXR</a><br>
+                <a href="mailto:shuto.takashita@star.rcast.u-tokyo.ac.jp">shuto.takashita@star.rcast.u-tokyo.ac.jp</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- English Content -->
+    <div id="content-en" style="display:none">
+        <div class="detail-section">
+            <h2>Vision: Plural Embodiment Society</h2>
+            <h3>“A society where diverse individuals can navigate and transform among multiple embodiments according to
+                their needs, preferences, and contexts.”</h3>
+            <p>I aim to build technologies and interactions that allow people to freely choose and adapt embodiments. By
+                reducing physical and psychological limitations, everyone can select the embodiment best suited to each
+                situation, making the ways we live far more diverse.</p>
+            <p>For example, you might spread the load of everyday shopping with sub‑arms, dive underground in a
+                snake‑shaped robot while at work, play as a dragon in the metaverse after coming home, or relax with
+                friends as a dog‑type avatar. Like Ditto in Pokémon, you continually transform from one body to another. We
+                envision a daily life where such “changing bodies like outfits” is taken for granted.</p>
+
+            <img src="vision.png" alt="Vision Illustration" />
+
+            <h2>Pursuing Human Body Plasticity</h2>
+            <p>Non‑human avatars can be characterized by two major axes: <strong>non‑homology</strong> (how different
+                their form is from the human body) and <strong>extensibility</strong> (extra degrees of freedom or
+                components). These raise two corresponding challenges:</p>
+            <ul>
+                <li><em>Issue of Shape</em>: How can fundamentally different shapes, such as octopus arms or spider
+                    bodies, be mapped to the innate body so they feel like one’s own?</li>
+                <li><em>Issue of Number</em>: How can the excess freedom and broad tactile surface beyond the human
+                    norm be compressed, integrated, and interpolated?</li>
+            </ul>
+
+            <img src="avatars.png" alt="Avatar Illustration" width="600" />
+
+            <p>For shape challenges, the key is to shorten the cognitive distance from the original body to the
+                reconstructed one. For number challenges, overlay presentation of information and reuse of redundant
+                degrees of freedom are crucial.</p>
+            <p>I organize these issues into four domains, <strong>(shape, number) × (control, feedback)</strong>. My
+                master’s research tackled the <strong>shape × control</strong> quadrant. During my PhD I will address
+                the remaining three and synthesize a theory of transformation that enables people to treat extended and
+                non‑homologous bodies as their own, considering not only cybernetic aspects but also the cultural
+                meaning of “transformation.”</p>
+
+            <img src="four.png" alt="Four Main Challenges" width="400" />
+
+            <h2>Expanding Ability and Mind with Non‑Human Bodies</h2>
+            <p>These bodies promise both physical and psychological extension.</p>
+            <p><strong>Physical extension</strong>: Exploring narrow spaces with octopus arms or snake robots, boosting
+                efficiency in zero‑gravity tasks with multi‑leg suits—changing body shape to broaden activity domains.
+            </p>
+            <p><strong>Psychological extension</strong>: Mitigating phobias, fostering empathy with animals, and
+                reconstructing self‑image, among other mental benefits.</p>
+            <p>This field is still in its infancy, leaving ample room for developing applications and clarifying
+                underlying mechanisms.</p>
+
+            <h2>Learning from Practice in the Metaverse</h2>
+            <p>My interest is rooted in avatar culture on the metaverse. Since diving into VRChat in 2018, I have been
+                fascinated by expanded bodily expressions—tails, moving animal ears, fire‑breathing—and the new channels
+                of communication they open. I hope to spread the joy of this culture beyond the boundary of reality and
+                virtuality and widen its scope.</p>
+            <p>Many of the challenges described above are the very issues users face in the metaverse. I advance my
+                research while interviewing these users about their needs and pain points.</p>
+
+            <h2>Adaptive Embodiment — User‑Driven Body Editing</h2>
+            <p>Proteus in Greek mythology changed his form freely to evade Menelaus. Beyond context‑adaptive
+                transformation, enabling users to flexibly rewrite embodiment according to their preferences and
+                physical traits would broaden the range of bodily adaptation. Equipping users with mechanisms to easily
+                edit body structure and control methods supports diversity of situations, tastes, and bodily
+                characteristics. I am exploring the potential of such self‑editing and inter‑body transitions.</p>
+            <p>To date, I have created <strong>two demos that let users edit their own bodies</strong> and several works
+                dealing with transformations between bodies. These experiences demonstrate the fun and utility of
+                “changing one’s body,” which I aim to elevate into a platform anyone can enjoy—a future of
+                <em>user‑generated embodiment</em> where everyone can edit, share, and remix bodies to their liking.</p>
+
+            <img src="self-bodyedit.png" alt="Self Body Edit Demos" width="600" />
+
+            <p style="text-align:center;margin-top:40px;">
+                If this vision resonates with you, feel free to reach out. I welcome collaborations and internships.
+            </p>
+            <p style="text-align:center;font-weight:bold;">
+                Shuto Takashita, PhD Year 2, Inami Lab, The University of Tokyo<br />
+                <a href="https://twitter.com/shike_cosmicXR" target="_blank">@shike_cosmicXR</a><br />
+                <a href="mailto:shuto.takashita@star.rcast.u-tokyo.ac.jp">shuto.takashita@star.rcast.u-tokyo.ac.jp</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function setLang(lang) {
+            document.getElementById('content-jp').style.display = (lang === 'jp') ? 'block' : 'none';
+            document.getElementById('content-en').style.display = (lang === 'en') ? 'block' : 'none';
+            document.getElementById('btn-jp').classList.toggle('active', lang === 'jp');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.documentElement.lang = lang;
+        }
+    </script>
+</body>
+
+</html>
