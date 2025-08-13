@@ -96,14 +96,13 @@
             height: 100%;
             overflow: auto;
             background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
         }
 
         .modal-content {
-            margin: auto;
-            display: block;
             max-width: 80%;
             max-height: 80%;
-            margin-top: 5%;
         }
 
         .close {
@@ -128,17 +127,45 @@
             }
 
             h1 {
-                width: 100%;
-                margin-left: 0;
+                width: 96%;
+                margin-left: 2%;
             }
 
-            .abstract-container,
+            .logo {
+                margin-bottom: 0px;
+            }
+
             .video-container {
-                width: 100%;
+                position: relative;
+                width: 96%;
+                padding-bottom: 54%;
+                /* 16:9アスペクト比 */
+                height: auto;
+                overflow: hidden;
+            }
+
+            .abstract-container {
+                width: 96%;
+            }
+
+            .abstract-container p {
+                font-size: 14px;
             }
 
             .gallery {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
                 width: 100%;
+                margin-top: 30px;
+            }
+
+            .gallery img {
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+                cursor: pointer;
             }
         }
     </style>
@@ -186,7 +213,7 @@
         function openModal(src) {
             var modal = document.getElementById("myModal");
             var modalImg = document.getElementById("img01");
-            modal.style.display = "block";
+            modal.style.display = "flex";
             modalImg.src = src;
         }
 
