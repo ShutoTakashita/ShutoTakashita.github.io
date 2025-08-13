@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imaginary Joint</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #080808;
+            color: white;
+            padding: 50px;
+            margin: 0;
+        }
+
+        .logo {
+            display: block;
+            text-align: left;
+            margin-bottom: -50px;
+        }
+
+        .logo img {
+            width: 50px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .abstract-container {
+            width: 70%;
+        }
+
+        .video-container {
+            position: relative;
+            width: 70%;
+            padding-bottom: 33.75%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe,
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .abstract-container p {
+            font-size: 20px;
+        }
+
+        header {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            width: 70%;
+            margin-left: 15%;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            width: 60%;
+            margin-top: 30px;
+        }
+
+        .gallery img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 80%;
+            max-height: 80%;
+            margin-top: 5%;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #999;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+
+            h1 {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            .abstract-container,
+            .video-container {
+                width: 100%;
+            }
+
+            .gallery {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <a href="http://shike-xr.com">
+            <img src="logo_white.png" alt="Shike XR Logo">
+        </a>
+    </div>
+    <header>
+        <h1>Imaginary Joint</h1>
+    </header>
+    <div class="container">
+        <div class="abstract-container">
+            <p>
+                Virtual body extensions such as a wing or tail have the potential to offer users new bodily experiences and capabilities in virtual and augmented reality. To use these extensions as naturally as one's own body—particularly for body parts that are normally hard to see, such as a tail—it is essential to provide proprioceptive feedback that allows users to perceive the position, orientation, and force exerted by these parts, rather than relying solely on visual cues. In this study, we propose a novel approach by introducing an "Imaginary Joint" at the interface between the user's actual body and the virtual extension, delivering information about joint flexion and force through skin-stretch feedback. We present a wearable device for skin-stretch feedback and explore informing mappings that convey the bending rotation and torque of the Imaginary Joint. The final system presents both types of information simultaneously by superimposing these skin deformations. Results from a controlled experiment with users demonstrate that users could identify tail position and force without relying on visual cues, and do so more effectively than in the vibrotactile condition. Furthermore, the tail was perceived as more embodied than in a vibrotactile condition, resulting in a more naturalistic and intuitive sensation. Finally, we introduce several application scenarios, including Perception of Extended Bodies, Enhanced Bodily Expression, and Body-Mediated Communication, and discuss the potential for future extensions of this system.
+            </p>
+        </div>
+
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/h0AyJ2qDiG4" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="gallery">
+            <img src="ImaginaryJoint.png" alt="Imaginary Joint Main" onclick="openModal(this.src)">
+            <img src="sunpou.png" alt="Dimensions" onclick="openModal(this.src)">
+            <img src="Applicaitions.jpg" alt="Applications" onclick="openModal(this.src)">
+            <img src="confusionmatrix_all.png" alt="Confusion Matrix" onclick="openModal(this.src)">
+            <img src="questionnaire.png" alt="Questionnaire Results" onclick="openModal(this.src)">
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <script>
+        function openModal(src) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");
+            modal.style.display = "block";
+            modalImg.src = src;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
