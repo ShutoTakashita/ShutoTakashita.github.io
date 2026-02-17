@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir /s /b \"C:\\\\Users\\\\Shuto\\\\Documents\\\\ShutoTakashita.github.io\")",
+      "Bash(findstr:*)"
+    ]
+  }
+}

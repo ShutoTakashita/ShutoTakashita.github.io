@@ -9,12 +9,14 @@
         href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Roboto:wght@400;700&display=swap">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #080808;
-            color: white;
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #111118;
+            color: #e0e0e8;
             text-align: center;
             padding: 50px 0;
             margin: 0;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
         }
 
         .logo {
@@ -33,11 +35,25 @@
 
         h1 {
             margin-top: 0;
+            color: #ffffff;
+            letter-spacing: 0.02em;
         }
 
         h2 {
-            margin-top: 0;
+            margin-top: 32px;
+            margin-bottom: 12px;
             margin-left: 10px;
+            color: #00BCD4;
+            font-size: 1.3em;
+            border-bottom: 1px solid #2a2a38;
+            padding-bottom: 6px;
+        }
+
+        h3 {
+            color: #c8c8d4;
+            font-size: 1.05em;
+            margin-top: 20px;
+            margin-bottom: 8px;
         }
 
         img[src="avatar.png"] {
@@ -45,18 +61,30 @@
             width: 120%;
             max-width: 500px;
             margin: 0 auto 20px;
+            border-radius: 12px;
+        }
+
+        a {
+            color: #00BCD4;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #4dd0e1;
         }
 
         ul {
             list-style: none;
             padding: 0;
-            margin: 20px 0;
+            margin: 12px 0;
         }
 
         li {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             margin-left: 20px;
             margin-right: 20px;
+            color: #c8c8d4;
         }
 
         .contents {
@@ -80,7 +108,7 @@
         }
 
         @media (min-width: 768px) {
-            body>div {
+            body > div {
                 display: flex;
                 align-items: flex-start;
                 justify-content: center;
@@ -92,7 +120,7 @@
                 margin-right: 50px;
             }
 
-            div>div {
+            div > div {
                 flex: 1;
                 max-width: 60%;
             }
@@ -114,10 +142,6 @@
         <h1>About</h1>
     </header>
     <div>
-        <div class="photo-section">
-            <img src="avatar.png" alt="Shuto Takashita">
-        </div>
-
         <div class="detail-section">
             <h2>経歴</h2>
             <ul>
@@ -129,16 +153,16 @@
                 <li>2024/04　同　博士課程　進学</li>
                 <li>航空宇宙工学(学士)</li>
                 <li>学際情報学(修士)</li>
-                <li>2021/10 - 2022/03  東京大学稲見研究室　“Unconventional Body Project”　リサーチアルバイト　</li>
+                <li>2021/10 - 2022/03  東京大学稲見研究室　"Unconventional Body Project"　リサーチアルバイト　</li>
                 <li>2024/04 – 2024/10　Sony CSL Kyoto リサーチアシスタント</li>
                 <li>2024/09 – 2024/12　Internship at Saarland University HCI Lab (指導: Jürgen Steimle)</li>
+                <li>2025/11 – 2026/01　Visiting Student at INRIA, France (指導: Anatole Lécuyer)</li>
             </ul>
 
             <h2>Skills</h2>
             <ul>
-                <li>Advanced : 3D modeling (blender), Unity (VR), Body Tracking, Haptics</li>
-                <li>Intermediate : Machine Learning, CG Animation, Space Enginnering</li>
-                <li>Begineer : Web (html, css), AWS, Docker</li>
+                <li>Advanced (論文を書くために自走できる程度) : アバター研究 (心理物理実験, 質的調査 (Reflexive Thematic Analysis), メタバース研究), Academic Writing, Unity VR, Body Tracking, 3D Modeling</li>
+                <li>Intermediate (論文で触ったことはある程度) : Haptics, Hardware, Machine Learning, 複合材料科学</li>
             </ul>
 
             <h2>Research Interests</h2>
@@ -156,16 +180,23 @@
 
             <h3>Conference Papers</h3>
             <ul>
-                <li>1. Shuto Takashita, Jürgen Steimle, Masahiko Inami, Imaginary Joint: Proprioceptive Feedback for Virtual Body Extensions via Skin Stretch, ACM UIST 2025</li>
-                <li>2. Shuto Takashita, Ken Arai, Hiroto Saito, Michiteru Kitazaki, Masahiko Inami, Embodied Tentacle: Mapping Design to Control of Non-Analogous Body Parts with the Human Body, ACM CHI 2024</li>
+                <li>1. Shuto Takashita, Yuji Hatada, Takuji Narumi, Masahiko Inami, Escape From Human: An Interview Study of Social VR Players Practicing Self-Expression Through Avatars that Self-Identify as "Non-Human", ACM CHI 2026 (Conditionally Accepted)</li>
+                <li>2. Shuto Takashita, Jürgen Steimle, Masahiko Inami, Imaginary Joint: Proprioceptive Feedback for Virtual Body Extensions via Skin Stretch, ACM UIST 2025</li>
+                <li>3. Shuto Takashita, Ken Arai, Hiroto Saito, Michiteru Kitazaki, Masahiko Inami, Embodied Tentacle: Mapping Design to Control of Non-Analogous Body Parts with the Human Body, ACM CHI 2024</li>
             </ul>
 
             <h3>Poster / Oral Presentation</h3>
             <ul>
                 <li>1. Shuto Takashita, Taiga Suzuki, Naoki Tanaka, Masahiko Inami, Editable Body: Interactive Adaptation of Avatar Control Schemes and Body Structures, IEEE VR 2025 Poster</li>
-                <li>2. Kazuki Toma, Shuto Takashita, Shinnichi Nakasuka (2023), Design of Space Music Hall as a Module of Low Earth Orbit Space Station, ICES2023</li>
-                <li>3. Shuto Takashita, Shu Minakuchi, Kazuya Kitamoto (2022), Estimation of Through-Thickness Moisture Distribution in Composite Materials Using Physics-Informed Neural Network, JCCM13</li>
-                <li>4. 中根敦久, 高下修聡 (2024), 移動型ロボットアームによる3Dスキャンデータへの物理特性の付加, VRSJ29</li>
+                <li>2. Shuto Takashita, Shu Minakuchi, Kazuya Kitamoto (2022), Estimation of Through-Thickness Moisture Distribution in Composite Materials Using Physics-Informed Neural Network, JCCM13</li>
+                <li>3. 高下修聡, 畑田裕二, 鳴海拓志, 稲見昌彦, 「ヒトではない」というアバターによる自己表現を実践するソーシャルVRユーザーへのインタビュー調査, VRSJ30 (学術奨励賞)</li>
+                <li>4. 高下修聡, Jürgen Steimle, 稲見昌彦, Virtual Joint: 皮膚伸長による拡張身体の動作に対応する体性感覚フィードバック, VRSJ30</li>
+                <li>5. Kazuki Toma, Shuto Takashita, Shinnichi Nakasuka (2023), Design of Space Music Hall as a Module of Low Earth Orbit Space Station, ICES2023</li>
+                <li>6. 山下純平, 齊藤寛人, 高下修聡, 櫻田国治, 門内靖明, 稲見昌彦, 会話ノードマッピングと視線検出を利用した会話支援技術の有効性評価, VRSJ30</li>
+                <li>7. 高柳綾香, 高下修聡, 櫻田国治, 齊藤寛人, 前川和純, 稲見昌彦, VRにおける個別環境介入を用いた会話参入補助, VRSJ30</li>
+                <li>8. 禰寝崇之, 高下修聡, 松平幸大, 齊藤寛人, 櫻田国治, 稲見昌彦, Mirroring Agent：自己の感情状態を反映するエージェントの設計とその対話がもたらす自己認識への影響, VRSJ30</li>
+                <li>9. 戸﨑利脩, 高下修聡, 齊藤寛人, 稲見昌彦, 非相同アームを用いた触覚的な空間探索を可能にするフィードバックマッピングに関する検討, VRSJ30</li>
+                <li>10. 中根敦久, 高下修聡 (2024), 移動型ロボットアームによる3Dスキャンデータへの物理特性の付加, VRSJ29</li>
             </ul>
 
             <h3>Demonstration</h3>
@@ -173,9 +204,9 @@
                 <li>1. Shuto Takashita, Jürgen Steimle, Masahiko Inami (2025), Imaginary Joints and Muscles: Torque-based Proprioceptive Illusions for Extended Body Parts via Skin Stretch Feedback, SIGGRAPH Emerging Technologies</li>
                 <li>2. Shuto Takashita, Naoki Tanaka, Taiga Suzuki (2023), Mechanical Brain Hacking: A VR Cybernetics Simulator for Body Editing, SIGGRAPH2023 Immersive Pavilion</li>
                 <li>3. Shuto Takashita, Amane Yamaguchi, Takuji Narumi, Inami Masahiko (2023), AvatarForge: A Real-Time and Node-Based Body Editing System, SIGGRAPH Asia 2023</li>
-                <li>4. Shuto Takashita, Naoki Tanaka, Taiga Suzuki (2022), Mechanical Brain Hacking, ICAT-EGVE2022</li>
-                <li>5. Shuto Takashita, Naoki Tanaka, Taiga Suzuki (2023), Mechanical Brain Hacking, Laval Virtual 2022</li>
-                <li>6. 高下修聡,田中尚輝,鈴木大河(2022), Mechanical Brain Hacking, VRSJ27</li>
+                <li>4. Shuto Takashita, Naoki Tanaka, Taiga Suzuki (2023), Mechanical Brain Hacking, Laval Virtual 2022</li>
+                <li>5. Shuto Takashita, Naoki Tanaka, Taiga Suzuki (2022), Mechanical Brain Hacking, ICAT-EGVE2022</li>
+                <li>6. 高下修聡, 田中尚輝, 鈴木大河(2022), Mechanical Brain Hacking, VRSJ27</li>
             </ul>
 
             <h2>Peer Review Experience</h2>
@@ -185,25 +216,27 @@
                 <li>ACM SIGGRAPH Asia XR</li>
                 <li>ACM SIGGRAPH Asia Emerging Technologies</li>
                 <li>ACM UIST</li>
+                <li style="color: #00BCD4; font-weight: bold;">Special Recognitions for Outstanding Reviews (UIST 2025, CHI 2026)</li>
             </ul>
 
             <h2>受賞歴 Awards</h2>
-            
+
             <ul>
-                <li>1. 高下修聡 (2024), 非人型アバターを用いた人の身体表象・能力への介入に関する研究, 東京大学学際情報学府 最優秀修士論文賞</li>
-                <li>2. 高下修聡, 田中尚輝, 鈴木大河 (2024), Mechanical Brain Hacking, XR Creative Award 大賞 (107作品中1位)</li>
-                <li>3. 高下修聡, 田中尚輝, 鈴木大河 (2022), Mechanical Brain Hacking:ロボットアバタを用いた 自らの脳改造・身体システム改造体験, IVRC2022 Laval Virtual Prize, ICAT-EGVE Special Prize, VR学会賞, Unity賞, ソリッドレイ賞, XR Kaigi招待展示賞</li>
-                <li>4. 高下修聡, 田中尚輝, 鈴木大河 (2023), Mechanical Brain Hacking, Innovative Technologies 2023</li>
-                <li>5. 高下修聡, 田中尚輝, 鈴木大河 (2022), Mechanical Brain Hacking, 第28回学生CGコンテスト Silver Prize　(404 作品中上位 7 作品)</li>
-                <li>6. 藤間一輝, 高下修聡, 岩瀬すみれ (2022), 宇宙音楽ホールの設計図, 第28回学生CGコンテスト Finalist　(404 作品中上位26作品)</li>
+                <li>1. 高下修聡, 畑田裕二, 鳴海拓志, 稲見昌彦 (2025), 「ヒトではない」というアバターによる自己表現を実践するソーシャルVRユーザーへのインタビュー調査, 第30回日本バーチャルリアリティ学会大会 学術奨励賞</li>
+                <li>2. 高下修聡 (2025), 第5回GCLSプレゼンコンペティション 審査員特別賞 —「身体化から変身へ：メタバースのアバター文化を起点とする非ヒト型身体の社会的・工学的設計論」</li>
+                <li>3. 高下修聡 (2025), Iwaken Lab. 大LT祭 2025 ルームB ベストLT賞 — 「身体化から変身へ：メタバースのアバター文化を起点とする非ヒト型身体の社会的・工学的設計論」</li>
+                <li>4. 高下修聡 (2025), IIS PhD Student Live 2025, Second Prize — "Plural Embodiment: How Can We 'Cherry-Pick' the Advantages of Multiple Bodies?"</li>
+                <li>5. 高下修聡 (2024), 非人型アバターを用いた人の身体表象・能力への介入に関する研究, 東京大学学際情報学府 最優秀修士論文賞</li>
+                <li>6. 高下修聡, 田中尚輝, 鈴木大河 (2024), Mechanical Brain Hacking, XR Creative Award 大賞 (107作品中1位)</li>
                 <li>7. 旭博佑, 高下修聡, 齊藤寛人, 前川和純, 門内靖明, 稲見昌彦 (2024), 身体運動周期を用いた没入型ロコモーションインターフェースの検討, 第 71 回 EC 研究会 デモ奨励賞第 1位 (13 件中 1 位)</li>
-                <li>8. 高下修聡, 小山髙 (2020), マドカノ, JPHACKS2020 Special Jury Award, 株式会社バンダイナムコ賞</li>
+                <li>8. 高下修聡, 田中尚輝, 鈴木大河 (2023), Mechanical Brain Hacking, Innovative Technologies 2023</li>
                 <li>9. 中村昂平、高下修聡、徐一博、前田結衣 (2023), 卓球マスターVR, イマクリエイト社　第一回ファンクリエイト 優勝</li>
-                <li>10. 高下修聡 (2025), 第5回GCLSプレゼンコンペティション 審査員特別賞 —「身体化から変身へ：メタバースのアバター文化を起点とする非ヒト型身体の社会的・工学的設計論」</li>
-                <li>11. 高下修聡 (2025), Iwaken Lab. 大LT祭 2025 ルームB ベストLT賞 — 「身体化から変身へ：メタバースのアバター文化を起点とする非ヒト型身体の社会的・工学的設計論」</li>
-                <li>12. 高下修聡 (2025), IIS PhD Student Live 2025, Second Prize — "Plural Embodiment: How Can We 'Cherry-Pick' the Advantages of Multiple Bodies?"</li>
+                <li>10. 高下修聡, 田中尚輝, 鈴木大河 (2022), Mechanical Brain Hacking:ロボットアバタを用いた 自らの脳改造・身体システム改造体験, IVRC2022 Laval Virtual Prize, ICAT-EGVE Special Prize, VR学会賞, Unity賞, ソリッドレイ賞, XR Kaigi招待展示賞</li>
+                <li>11. 高下修聡, 田中尚輝, 鈴木大河 (2022), Mechanical Brain Hacking, 第28回学生CGコンテスト Silver Prize　(404 作品中上位 7 作品)</li>
+                <li>12. 藤間一輝, 高下修聡, 岩瀬すみれ (2022), 宇宙音楽ホールの設計図, 第28回学生CGコンテスト Finalist　(404 作品中上位26作品)</li>
+                <li>13. 高下修聡, 小山髙 (2020), マドカノ, JPHACKS2020 Special Jury Award, 株式会社バンダイナムコ賞</li>
             </ul>
-            
+
 
             <h2>競争的資金の獲得</h2>
             <ul>
@@ -220,7 +253,7 @@
                 <li>2. 子供の科学「カラダを増やす最新研究！」掲載</li>
                 <li>3. someone「あなたの歩く一歩先」掲載</li>
                 <li>4. 東京大学メディアコンテンツ教育プログラム 修了</li>
-                <li>5. SIGGRAPH 2023 “CG in Japan” セッショントーク</li>
+                <li>5. SIGGRAPH 2023 "CG in Japan" セッショントーク</li>
             </ul>
         </div>
     </div>

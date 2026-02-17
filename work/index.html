@@ -9,12 +9,14 @@
         href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Roboto:wght@400;700&display=swap">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #080808;
-            color: white;
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #111118;
+            color: #e0e0e8;
             text-align: center;
             padding: 50px 0;
             margin: 0;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
         }
 
         header {
@@ -23,20 +25,18 @@
 
         h1 {
             margin-top: 0;
+            color: #ffffff;
+            letter-spacing: 0.02em;
         }
 
         .logo {
             display: block;
-            /* ブロック要素として表示 */
             text-align: left;
-            /* ロゴを右揃えに */
             margin-bottom: -50px;
-            /* Worksとの間隔を確保 */
         }
 
         .logo img {
             width: 50px;
-            /* ロゴの幅。必要に応じて変更 */
         }
 
         .work-gallery {
@@ -44,6 +44,7 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
+            padding: 0 20px;
         }
 
         .work-item {
@@ -52,13 +53,22 @@
             position: relative;
             overflow: hidden;
             height: 500px;
+            border-radius: 8px;
+            border: 1px solid #2a2a38;
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .work-item:hover {
+            border-color: #00BCD4;
+            transform: translateY(-4px);
         }
 
         .work-item a {
             display: block;
             position: relative;
-            color: white;
+            color: #e0e0e8;
             text-decoration: none;
+            height: 100%;
         }
 
         .work-item img {
@@ -70,6 +80,11 @@
             display: block;
             vertical-align: bottom;
             margin: 0 auto;
+            transition: opacity 0.3s ease;
+        }
+
+        .work-item:hover img {
+            opacity: 0.85;
         }
 
         .work-item h2 {
@@ -78,17 +93,20 @@
             left: 0;
             right: 0;
             width: 100%;
-            background-color: rgba(8, 8, 8, 0.8);
+            background: linear-gradient(transparent, rgba(17, 17, 24, 0.95));
             margin: 0;
-            padding: 10px 0;
+            padding: 30px 12px 14px;
             text-align: center;
             z-index: 10;
+            font-size: 1.1em;
+            font-weight: 600;
         }
 
         @media (max-width: 768px) {
             .work-item {
                 flex: 1 1 100%;
                 max-width: 100%;
+                height: auto;
             }
 
             .work-item img {
@@ -122,6 +140,12 @@
         <h1>Works</h1>
     </header>
     <div class="work-gallery">
+        <div class="work-item">
+            <a href="/work/escape-from-human">
+                <img src="escape-from-human.png" alt="Escape From Human">
+                <h2>Escape From Human (2025)</h2>
+            </a>
+        </div>
         <div class="work-item">
             <a href="/work/imaginary-joint">
                 <img src="ImaginaryJoint.png" alt="Imaginary Joint">
@@ -165,7 +189,6 @@
                 <h2>Kinematic altering illusion (2022)</h2>
             </a>
         </div>
-        <!-- ...他の作品も同様に記述... -->
     </div>
 </body>
 

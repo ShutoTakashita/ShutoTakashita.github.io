@@ -10,20 +10,21 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Roboto:wght@400;700&display=swap"
         rel="stylesheet">
-    <!-- Google Fontsのリンクを追加 -->
     <style>
         body {
-            background-color: #080808;
-            color: white;
-            font-family: Arial, sans-serif;
-            /* デフォルトのフォント設定 */
+            background-color: #111118;
+            color: #e0e0e8;
+            font-family: 'Roboto', Arial, sans-serif;
             text-align: center;
             padding: 50px 0;
+            margin: 0;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
         }
 
         img.logo {
             width: 400px;
-            opacity: 0.4;
+            opacity: 0.35;
             position: relative;
             z-index: 1;
         }
@@ -32,25 +33,29 @@
             font-size: 6em;
             font-family: 'Big Shoulders Display', Arial, sans-serif;
             margin-bottom: -250px;
-            /* ロゴとの間にスペースを追加 */
+            color: #ffffff;
+            letter-spacing: 0.02em;
         }
 
-
         a {
-            color: white;
+            color: #c8c8d4;
             text-decoration: none;
             margin: 0 15px;
             font-size: 1.5em;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #00BCD4;
+            text-decoration: none;
         }
 
         a.work-link {
             font-family: 'Roboto', Arial, sans-serif;
-            /* Robotoフォントを設定 */
         }
 
         .info .university {
             font-family: sans-serif;
-            /* サンセリフフォントを設定 */
         }
 
         .info a {
@@ -58,30 +63,28 @@
             margin: 0;
         }
 
-        a:hover {
-            text-decoration: underline;
-        }
-
         .info {
             margin-top: 30px;
             font-size: 1.2em;
+            color: #9a9ab0;
+        }
+
+        .info p {
+            margin: 8px 0;
         }
 
         @media (min-width: 768px) {
             img.logo {
                 width: 800px;
-                /* PC表示時のロゴサイズを2倍に */
             }
 
             h1 {
                 font-size: 12em;
                 margin-bottom: -500px;
-                /* 名前のフォントサイズを2倍に */
             }
 
             a {
                 font-size: 3em;
-                /* リンクのフォントサイズを2倍に */
             }
 
             .info a {
@@ -90,9 +93,7 @@
 
             .info {
                 font-size: 2.4em;
-                /* 情報部分のフォントサイズを2倍に */
             }
-
         }
     </style>
 </head>

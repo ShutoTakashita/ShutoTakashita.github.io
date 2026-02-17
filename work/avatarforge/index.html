@@ -4,14 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <title>AvatarForge</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #080808;
-            color: white;
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #111118;
+            color: #e0e0e8;
             padding: 50px;
             margin: 0;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
         }
 
         .logo {
@@ -62,6 +65,7 @@
 
         .abstract-container p {
             font-size: 20px;
+            color: #c8c8d4;
         }
 
         header {
@@ -71,11 +75,18 @@
         h1 {
             width: 70%;
             margin-left: 15%;
+            color: #ffffff;
+            letter-spacing: 0.02em;
         }
 
         a {
-            color: white;
+            color: #c8c8d4;
             text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #00BCD4;
         }
 
         .gallery {
@@ -93,6 +104,12 @@
             height: 100px;
             object-fit: cover;
             cursor: pointer;
+            border-radius: 6px;
+            transition: transform 0.2s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
         }
 
         /* モーダル用スタイル */
@@ -103,7 +120,7 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(11, 11, 18, 0.9);
             justify-content: center;
             align-items: center;
         }
