@@ -80,7 +80,7 @@
             justify-content: center;
             gap: 20px;
             width: 60%;
-            margin-top: 30px;
+            margin: 30px auto 0;
         }
 
         .gallery img {
@@ -95,6 +95,32 @@
         .gallery img:hover {
             transform: scale(1.05);
         }
+
+        .modal-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.08);
+            border: none;
+            color: #e0e0e8;
+            font-size: 40px;
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s ease;
+            z-index: 10000;
+        }
+
+        .modal-nav:hover {
+            background: rgba(255,255,255,0.22);
+        }
+
+        .modal-nav.prev { left: 20px; }
+        .modal-nav.next { right: 20px; }
 
         .modal {
             display: none;
@@ -158,19 +184,12 @@
             }
 
             .gallery {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 20px;
                 width: 100%;
-                margin-top: 30px;
             }
 
             .gallery img {
                 width: 150px;
                 height: 150px;
-                object-fit: cover;
-                cursor: pointer;
             }
         }
     </style>
@@ -203,29 +222,57 @@
         </div>
     </div>
 
+    <div class="gallery">
+        <img src="slide1.png" alt="Slide 1" onclick="openModal(0)">
+        <img src="slide2.png" alt="Slide 2" onclick="openModal(1)">
+        <img src="slide3.png" alt="Slide 3" onclick="openModal(2)">
+        <img src="slide4.png" alt="Slide 4" onclick="openModal(3)">
+        <img src="slide5.png" alt="Slide 5" onclick="openModal(4)">
+        <img src="slide6.png" alt="Slide 6" onclick="openModal(5)">
+        <img src="slide7.png" alt="Slide 7" onclick="openModal(6)">
+        <img src="slide8.png" alt="Slide 8" onclick="openModal(7)">
+        <img src="slide9.png" alt="Slide 9" onclick="openModal(8)">
+        <img src="slide10.png" alt="Slide 10" onclick="openModal(9)">
+        <img src="slide11.png" alt="Slide 11" onclick="openModal(10)">
+        <img src="slide12.png" alt="Slide 12" onclick="openModal(11)">
+        <img src="slide13.png" alt="Slide 13" onclick="openModal(12)">
+        <img src="slide14.png" alt="Slide 14" onclick="openModal(13)">
+        <img src="slide15.png" alt="Slide 15" onclick="openModal(14)">
+        <img src="slide16.png" alt="Slide 16" onclick="openModal(15)">
+        <img src="slide17.png" alt="Slide 17" onclick="openModal(16)">
+        <img src="slide18.png" alt="Slide 18" onclick="openModal(17)">
+    </div>
+
     <div id="myModal" class="modal">
         <span class="close" onclick="closeModal()">&times;</span>
+        <button class="modal-nav prev" onclick="modalNav(-1)">&#8249;</button>
         <img class="modal-content" id="img01">
+        <button class="modal-nav next" onclick="modalNav(1)">&#8250;</button>
     </div>
 
     <script>
-        function openModal(src) {
+        var slides = Array.from({length: 18}, function(_, i) { return "slide" + (i + 1) + ".png"; });
+        var currentIndex = 0;
+
+        function openModal(index) {
+            currentIndex = index;
             var modal = document.getElementById("myModal");
-            var modalImg = document.getElementById("img01");
+            document.getElementById("img01").src = slides[currentIndex];
             modal.style.display = "flex";
-            modalImg.src = src;
+        }
+
+        function modalNav(dir) {
+            currentIndex = (currentIndex + dir + slides.length) % slides.length;
+            document.getElementById("img01").src = slides[currentIndex];
         }
 
         function closeModal() {
-            var modal = document.getElementById("myModal");
-            modal.style.display = "none";
+            document.getElementById("myModal").style.display = "none";
         }
 
         window.onclick = function(event) {
             var modal = document.getElementById("myModal");
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
+            if (event.target == modal) modal.style.display = "none";
         }
     </script>
 </body>
